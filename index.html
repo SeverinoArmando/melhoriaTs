@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Processo Seletivo</title>
+</head>
+<body>
+    <header>
+        <!-- logotipo -->
+            <div><i><a href="https://www.globo.com/" class="logo" target="_blank">Globo</a></i></div>
+            <div class="rightSide"> <!-- botoes para mudar o tema -->
+                <div class="ms">
+                    <div class="botoes noiteDia">
+                        
+                        <ion-icon name="moon-outline"></ion-icon>
+                        <ion-icon name="sunny-outline"></ion-icon>
+                    </div>
+                
+                    <!-- icone do menu -->
+                    <div class="botoes menu">
+                        <ion-icon name="menu-outline"></ion-icon>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </div>
+           </div>           
+           
+           
+           <div class="conteudo-in container">
+            <div class="pesquisa conteudo">
+                <input id="search"type="text" placeholder="Buscar....">
+                <div class="autoComplet">
+                    <li>Futebol brasileiro</li>
+                    <li>Futebol americano</li>
+                    <li>Futebol</li>
+                    <li>Musica</li>
+                    <li>Musica de anderson freire</li>
+                    <li>Musica que neymar pediu</li>
+                    <li>Politica entre dilma e aecio</li>
+                    <li>Politica</li>
+                    <li>Politica macroeconomica</li>
+                    <li>Neymar</li>
+                    <li>Neymar no barcelona</li>
+                    <li>Gol do neymar</li>
+                    <li>Iphone memoria</li>
+                    <li>Iphone plus</li> 
+                    <li>Iphone 6</li>
+                </div>
+                <div class="icon"><ion-icon id="lupa" name="search-outline"></ion-icon></div>
+            </div>
+            <div id="match-list"></div>
+        </div>
+        
+        </div>
+    </header>
+    <!-- corpo do site -->
+    <section class="main">
+        <!-- configuração do video/ auto play e em loop -->
+        <video src="midia/video.mp4" autoplay loop muted type='mp4'></video>
+        <img src="midia/mask.jpg" alt="papel borrado" class="imagem">
+        <h2>GloboCom</h2>
+        <footer class="Cright">
+            <p>&copy;2021. Todos os direitos reservados</p>
+        </footer>
+        <ul class="redesSociais">
+            <li><a href="https://www.facebook.com/tvglobo" target="_blank"><ion-icon name="logo-Facebook"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/tvglobo/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+    </section>
+
+
+    <!-- navegacao -->
+    <ul class="navegacao">
+        <li><a href="index.html">Globo G1</a></li>
+        <li><a href="http://globoesporte.globo.com/pop-arte/index.html" target="_blank">Globo Esporte</a></li>
+        <li><a href="https://globoplay.globo.com/" target="_blank">Globo Play</a></li>
+    </ul>
+
+    <!-- incorporação de um link externo para poder colocar icone de pesquisa -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- script para mudar de tema/cor -->
+<script src="Js/tema/main.js"></script>
+<!-- script para interagir com as sugestoes de pesquisa -->
+<script src="Js/script.js"></script>
+<script src="Js/sugestao.js"></script>
+<!-- script para intergar com o arquivo json -->
+<script src="Js/scriptJson.js"></script>
+
+</body>
+</html>

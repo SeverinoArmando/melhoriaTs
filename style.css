@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+/* criacao das variaveis */
+:root{
+    --preto:#333;
+    --branco:#fff;
+}
+/* configuracao do input */
+ header .container{
+     position: absolute;
+     left: 40%;
+     right: 40%;
+ }
+
+ /* posicionamento da lupa de pesquisa */
+.conteudo #icon{
+     height: 56px;
+     width: 56px;
+     line-height: 56px;
+     position: relative;
+     top: 0;
+     left: 0;
+ }
+.conteudo input{
+    line-height: 2rem;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    
+}
+.match{
+    display: flex;
+    padding:9px;
+    flex-direction: row-reverse;
+    text-align: start;
+}
+
+/* colaração dos textos da sugestão */
+#match-list{
+    letter-spacing: 0.1rem;
+    font-size: 16px;
+    box-shadow: 00px 25px 30px rgba(0, 0, 0, .09);
+    cursor: pointer;
+    background-color: var(--branco);
+    width: 300px;
+    text-align: center;
+    color: black;
+}
+/* hiver no fundo preto */
+.preto #match-list:hover{
+        background-color: white;
+}#match-list:hover{
+    background-color: rgba(46, 43, 43, 0.932);
+    color:var(--branco);
+    width: 300px;
+}
+.span a{
+    text-decoration: none;
+    font-size: auto;
+}
+.span{
+    padding: 9px;
+}
+/* varieveis de cor */
+.preto{
+    --preto:#fff;
+    --branco:#333;
+}
+/* ajustando os item dentro do header */
+header{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding:40px 100px;
+    z-index: 10000;
+}
+
+header .logo{
+    position: relative;
+    display: inline-flex;
+    color: var(--preto);
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+header .sugestoes{
+    position: absolute;
+    top: 0;
+    right: 0;  bottom: 0;
+    left: 30%;
+    margin: auto;
+    margin-top: 0px;
+    width: 981px;
+    height: 610px;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    /* visibility: hidden; */
+}
+.ms{
+    display: flex;
+}
+.rightSide{
+    display: flex;
+}
+.rightSide .container{
+    flex-direction: column;
+}
+.botoes{
+    position: relative;
+    width: 40px;;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.botoes ion-icon
+{
+    font-size: 1.5em;
+    color: var(--preto );
+}
+
+.botoes.menu ion-icon{
+    font-size: 2em;
+}
+
+/* mudançca em dois elementos  */
+.botoes ion-icon:nth-child(2)
+{
+    display: none;
+}
+/* ativando o icone da mudança do icone */
+.botoes.active ion-icon:nth-child(2)
+{
+    display: block;
+}
+
+/* ocultando um icone e deixando o outro */
+.botoes.active ion-icon:nth-child(1)
+{
+    display: none;
+}
+/* configuracao do corpo/main */
+.main{
+    position: relative;
+    width: 100%;
+    min-height:100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* confi. video */
+.main video
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ajustar a imagem ao video */
+.imagem{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    /* controlar a aparecia da selecao */
+    user-select: none;
+    /* misturando elementos(video e imagem) */
+    mix-blend-mode: screen;
+}
+
+.preto .imagem{
+    /* usamos o inverte para inverter devolver a cor original do rabisco*/
+    filter: invert(1);
+    mix-blend-mode: multiply;
+
+}
+
+.main h2{
+    position: relative;
+    z-index: 3;
+    font-size: 16vw;
+    color: #fff;
+    text-shadow: 0 20px 30px rgba(0, 0, 0, 0.90);
+}
+
+.navegacao{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: var(--branco);
+    z-index: 4;
+    transition: 0.5s;
+}
+
+.navegacao li{
+    list-style: none;
+}
+
+.navegacao li a
+{
+ display: inline-flex;  
+ text-decoration: none; 
+ margin: 5px 0;
+ font-size: 1.35em;
+ color: var(--preto);
+ padding: 5px 20px;
+ border-radius: 45px;
+}
+
+.navegacao li a:hover
+{
+    background: var(--preto);
+    color: var(--branco);
+}
+/* conf navegacao if active */
+.navegacao.active{
+    left: 0;
+}
+
+.Cright{
+    position: absolute;
+    left: 100px;
+    bottom: 40px;
+    z-index: 4;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--preto);
+}
+
+.redesSociais{
+    position: absolute;
+    right: 100px;
+    bottom: 40px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+}
+.redesSociais li{
+    list-style: none;
+}
+.redesSociais li a{
+    text-decoration: none;
+    color: var(--preto);
+    font-size: 2.75em;
+}
+
+/* limite da tela /ajuste da responsividade*/
+
+@media (max-width:769px){
+    header{
+        padding: 20px;
+    }
+    .Cright {
+        left: 20px;
+        bottom: 30px;
+    }
+    .redesSociais{
+        right: 20px;
+        bottom: 20px;
+    }
+    .conteudo-in .pesquisa{
+        width: 200px;
+    }
+}
+
+/* Configuração dos elementos do input/lupa de pesquisa e das sugestoes */
+.conteudo-in .pesquisa{
+    position: relative;
+    background-color: var(--branco);
+    width: 300px;
+}
+.conteudo-in{
+    max-width: 450px;
+    margin: 150px auto;
+    margin-right: 183px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+.pesquisa input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.233);
+    border-radius: 5px;
+    padding: 0 60px 0 22px;
+    font-size: 18px;
+    
+}
+.icon{
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(77, 98, 99);
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+/* organização da lista para não transbordar */
+.pesquisa .autoComplet{
+    padding: 0px;
+    max-height: fit-content;
+    overflow-y: auto;
+
+    /* ocultar a lista quando não necessaria */
+    opacity: 0;
+    pointer-events: none;
+} 
+
+.autoComplet li{
+    list-style: none;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 3px;
+    display: none;
+}
+
+.autoComplet li:hover{
+    background-color: var(--preto);
+    color:var(--branco);
+}
+
+/* Adionar as sugestoes de palavras a classe active quando acionado
+ */.pesquisa.active .autoComplet
+ {
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+ }
+
+ .pesquisa.active .autoComplet li
+ {
+    display: block;
+ }
